@@ -1,0 +1,12 @@
+---
+title: "About"
+format: html
+editor: visual
+---
+
+This project was developed by **Average** For [STA 199: Introduction to Data Science](https://sta199-f23-2.github.io/) at Duke University. The team is comprised of the following team members.
+
+-   Team member 1: Julia Zheng is a freshman at Duke majoring in psychology and statistics.
+-   Team member 2: Arla Ragun is a freshman at Duke studying statistics and computer science.
+-   Team member 3: Jerry Lin is a freshman at Duke studying statistics and computer science.
+-   Team member 4: Josephine Palde is a junior at Duke studying political science in political economy, minoring in economics

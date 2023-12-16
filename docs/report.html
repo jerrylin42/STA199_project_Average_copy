@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>An Analysis of Maternal Pregnancy and Mental Health under COVID-19</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Average</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./proposal.html" rel="" target="">
+ <span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./presentation.pdf" rel="" target="">
+ <span class="menu-text">Presentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./report.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Report</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-and-data" id="toc-introduction-and-data" class="nav-link active" data-scroll-target="#introduction-and-data">Introduction and Data</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  </ul></li>
+  <li><a href="#research-question-and-hypotheses" id="toc-research-question-and-hypotheses" class="nav-link" data-scroll-target="#research-question-and-hypotheses">Research Question and Hypotheses</a></li>
+  <li><a href="#literature" id="toc-literature" class="nav-link" data-scroll-target="#literature">Literature</a></li>
+  <li><a href="#glimpse-of-data" id="toc-glimpse-of-data" class="nav-link" data-scroll-target="#glimpse-of-data">Glimpse of data</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">An Analysis of Maternal Pregnancy and Mental Health under COVID-19</h1>
+<p class="subtitle lead">Report</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction-and-data" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-and-data">Introduction and Data</h2>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>The COVID-19 pandemic impacted the lives of billions around the world physically, mentally, and emotionally. When lockdowns caused resources and interactions to be severely limited <span class="citation" data-cites="wei2021">(<a href="#ref-wei2021" role="doc-biblioref">Wei et al. 2021</a>)</span>, many groups were impacted. Pregnant mothers and their offspring were one such group vulnerable to the abrupt change, evidenced by a 25% increase in maternal deaths from 2020 to 2021 as a result of COVID-19 <span class="citation" data-cites="Office_2023">(<a href="#ref-Office_2023" role="doc-biblioref">Office 2023</a>)</span>. Aside from the physical manifestations of the pandemic’s outcomes, however, there were also significant mental repercussions. Research shows that poor mental health can affect the well-being of both the child and the mother <span class="citation" data-cites="ahmad2021">(<a href="#ref-ahmad2021" role="doc-biblioref">Ahmad and Vismara 2021</a>)</span>. Through this project, we aim to explore the claim that psychological distress, such as anxiety and depression, is linked with any change in an unborn baby’s health, while also looking at any other factors that could contribute to this psychological distress.</p>
+<p>To explore this topic, we developed the following research question: do pregnant women with higher anxiety and depression levels (measured in the PROMIS and Edinburgh Scale) tend to give birth to babies with a shorter gestational age? We utilized the “Pregnancy Protocols During COVID-19” dataset to help us answer this question by aiding in our understanding of the extent to which each of these factors impact the status of the offspring.</p>
+<p>There is a potential ethical concern that can be addressed pertaining to the outcome of our findings. As noted, the information from this data is collected through a scaling system, which provides specific quantitative data, but it is uncertain how accurate this data truly is. Our main concern in the data is a weak representation of the relationship between mothers’ mental health and birth information. There is a possibility of human error when it comes to this system of collecting data for the study. For example, because mental health is often a subjective experience, it is difficult to quantitate, even with scales to measure. Additionally, it is uncertain if mothers may be influenced by the purpose of the study to answer differently than their true feelings. As a result, it is difficult to know how accurate these scaling reports are depicted to be, which can result in potentially misleading data. Although this could be a problem, the visualizations will provide further insight into our predictions.</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p><u>Data set:</u> https://osf.io/ha5dp/</p>
+<p><u>Paper from data:</u> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10339202/</p>
+<p>The “Pregnancy Protocols During COVID-19” data set was sourced from a group of researchers who conducted a study on mental health of pregnant individuals during the pandemic between 2020 to 2021 in Canada. Data was collected via questionnaires through the Research Electronic Data Capture (REDCap) website; participants were recruited with promotions through online methods, such as pregnancy organizations and advertisements in Facebook and Instagram. Throughout this study, the respondents, who were aged 17 to 35 years old, were followed-up multiple times during their pregnancy until one year post-birth <span class="citation" data-cites="lebel2023">(<a href="#ref-lebel2023" role="doc-biblioref">Lebel et al. 2023</a>)</span>.</p>
+<p>Each observation represents an individual mother who gave birth. The observations focused on the mothers’ mental health and the babies’ birth information such as weight, height, delivery mode, and date. The mental health information was collected through the Edinburgh Postnatal Depression Scale, a screening tool to assist medical practitioners in identifying if the patient suffers from postnatal depression, and the PROMIS anxiety scale, a patient-reported measurement system that assesses the fear and anxiety of an individual, which is often conducted before clinician visits. Higher values of each of these tests indicate more severe levels of depression/anxiety. The data set also includes demographic information about the mother, such as maternal age, maternal education, and household income <span class="citation" data-cites="lebel2023">(<a href="#ref-lebel2023" role="doc-biblioref">Lebel et al. 2023</a>)</span>.</p>
+</section>
+</section>
+<section id="research-question-and-hypotheses" class="level2">
+<h2 class="anchored" data-anchor-id="research-question-and-hypotheses">Research Question and Hypotheses</h2>
+<p>In our research, we address two questions:</p>
+<ul>
+<li><p>Do pregnant individuals with higher anxiety and depression levels (measured in the PROMIS and Edinburgh scale) tend to have a shorter gestational age at birth? To what extent are these factors correlated with the gestational age at birth?</p></li>
+<li><p>Is the household income range of pregnant individuals correlated with their anxiety and/or depression levels (measured in the PROMIS and Edinburgh scale) during the pandemic?</p></li>
+</ul>
+<p>The first research question explores how mental health factors like anxiety and depression may be correlated with the birth status of offspring: specifically, the gestational age at birth. It not only looks at how these factors are linked to potentially premature offspring, but to what extent each one may have an impact. We hypothesize a potential negative correlation between anxiety and depression levels and gestational age, with higher anxiety/depression levels predicting lower gestational age at birth.</p>
+<p>The second research question investigates if the socioeconomic class of pregnant individuals correlates to their mental health state, which is measured in the PROMIS anxiety scale and the Edinburgh scale. Through it, we aim to explore our hypothesis: financially stable mothers tend to experience better mental health compared to mothers in other socioeconomic status during the pandemic.</p>
+<p><u>Question 1:</u></p>
+<p>Explanatory variable(s): Anxiety level (PROMIS scale), depression level (Edinburgh scale) are both quantitative variables.</p>
+<p>Response variable(s): Gestational Age at Birth is a quantitative variable measured in weeks.</p>
+<p><u>Question 2:</u></p>
+<p>Explanatory variable(s): Household income is a categorical variable with categories representing ranges of income.</p>
+<p>Response variable(s): Anxiety level (PROMIS scale), depression level (Edinburgh scale) are both quantitative variables.</p>
+</section>
+<section id="literature" class="level2">
+<h2 class="anchored" data-anchor-id="literature">Literature</h2>
+<p>Link: <a href="https://bmcpregnancychildbirth.biomedcentral.com/articles/10.1186/s12884-021-04337-9" class="uri">https://bmcpregnancychildbirth.biomedcentral.com/articles/10.1186/s12884-021-04337-9</a></p>
+<p>This article describes a study conducted on 12 participants, ranging from 30-43 years old, between 1-6 months after giving birth. The study found that six main themes emerged from their responses to interviews:</p>
+<ol type="1">
+<li><p>Challenges related to child-bearing in their daily lives: this included employment, access to food, and transportation</p></li>
+<li><p>Increased worry, fear, and uncertainty: patients expressed worry about their partner contracting the virus, uncertainty about the effects it might have on their baby due to lack of information, etc.</p></li>
+<li><p>Pervasive sense of loss: mothers expressed a disconnect between their expectations of pregnancy and the reality, in terms of bonding with their baby, familial support, etc.</p></li>
+<li><p>Challenge accessing healthcare: in terms of mental health care, physiotherapy, breastfeeding support</p></li>
+<li><p>Coping strategies with stress of pandemic: patients described seeking out information or adaptive behaviors such as self-care and seeking support</p></li>
+<li><p>Offered advice for others: advocating for themselves, avoiding isolation</p>
+<p><span class="citation" data-cites="kolker2021">(<a href="#ref-kolker2021" role="doc-biblioref">Kolker et al. 2021</a>)</span></p></li>
+</ol>
+<p>The article cited describes the mental health implications of the COVID-19 pandemic on pregnancy in fairly broad terms, with general themes of worry, challenges, loss, etc. It is clear that the pandemic has had negative impacts on pregnant women, and we are interested in looking at specific aspects of this dynamic. Our research question is specific and looks at quantifiable factors, such as household income and anxiety levels in relation to outcomes such as gestational age of the baby.</p>
+</section>
+<section id="glimpse-of-data" class="level2">
+<h2 class="anchored" data-anchor-id="glimpse-of-data">Glimpse of data</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 10,772
+Columns: 16
+$ OSF_ID                                       &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9…
+$ Maternal_Age                                 &lt;dbl&gt; 38.3, 34.6, 34.3, 28.8, 3…
+$ Household_Income                             &lt;chr&gt; "$200,000+", "$200,000+",…
+$ Maternal_Education                           &lt;chr&gt; "Masters degree", "Underg…
+$ Edinburgh_Postnatal_Depression_Scale         &lt;dbl&gt; 9, 4, NA, 9, 14, 3, 8, NA…
+$ PROMIS_Anxiety                               &lt;dbl&gt; 13, 17, NA, 20, 20, 8, 15…
+$ Gestational_Age_At_Birth                     &lt;dbl&gt; 39.71, NA, NA, 38.57, 39.…
+$ `Delivery_Date(converted to month and year)` &lt;chr&gt; "Dec2020", NA, NA, "Dec20…
+$ Birth_Length                                 &lt;dbl&gt; 49.20, NA, NA, 41.00, 53.…
+$ Birth_Weight                                 &lt;dbl&gt; 3431, NA, NA, 2534, 3714,…
+$ Delivery_Mode                                &lt;chr&gt; "Vaginally", NA, NA, "Vag…
+$ NICU_Stay                                    &lt;chr&gt; "No", NA, NA, "No", "No",…
+$ Language                                     &lt;chr&gt; "English", "English", "Fr…
+$ Threaten_Life                                &lt;dbl&gt; 2, 2, NA, 53, 23, 29, 24,…
+$ Threaten_Baby_Danger                         &lt;dbl&gt; 3, 33, NA, 67, 32, 36, 30…
+$ Threaten_Baby_Harm                           &lt;dbl&gt; 27, 92, NA, 54, 71, 33, 3…</code></pre>
+</div>
+</div>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<p>Initially, we used a scatterplot to visualize the relationship between gestational age and depression (as measured by the Edinburgh Postnatal Depression Scale).</p>
+<p><u>Gestational Age vs.&nbsp;Depression</u></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/gestation-vs-edinburgh-scatter-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term                                 estimate std.error statistic     p.value
+  &lt;chr&gt;                                   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+1 (Intercept)                           39.5      0.0423     935.   0          
+2 Edinburgh_Postnatal_Depression_Scale  -0.0201   0.00380     -5.29 0.000000124</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic    p.value    df  logLik    AIC    BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1   0.00448       0.00432  1.60      28.0    1.24e-7     1 -11774. 23554. 23575.
+# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+</div>
+</div>
+<p>Based on the scatterplot, there seems to be a large spread of observations with no immediate clear pattern. After fitting a line of best fit and getting a very low p-value, it turns out there is a slightly negative slope, with gestational age decreasing on average by .02 weeks with every increase in one point on the EDPS scale. This negative correlation suggests that higher depression rating could correlate with lower gestational age. However, the <span class="math inline">\(R^2\)</span> value of nearly 0 suggests depression level doesn’t explain variability in gestational age well. This means it is not a good idea to use this model to predict other values.</p>
+<p>We then visualized gestational age vs.&nbsp;anxiety.</p>
+<p><u>Gestational Age vs.&nbsp;Anxiety</u></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/gestation-vs-promis-scatter-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term           estimate std.error statistic      p.value
+  &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;
+1 (Intercept)     39.7      0.0658     603.   0           
+2 PROMIS_Anxiety  -0.0185   0.00340     -5.45 0.0000000521</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic    p.value    df  logLik    AIC    BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1   0.00476       0.00460  1.60      29.7    5.21e-8     1 -11745. 23496. 23516.
+# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+</div>
+</div>
+<p>Once again, there seems to be a large spread of observations with no immediate clear pattern. Like with gestational age vs.&nbsp;depression, the line of best fit and low p-value suggest there is a slightly negative slope, with gestational age decreasing on average by about .02 weeks with every increase in one point on the PROMIS scale, suggesting higher anxiety ratings could correlate to lower gestational age via a negative relationship. However, the <span class="math inline">\(R^2\)</span> value of nearly 0 again suggests anxiety level doesn’t explain variability in gestational age well. As a result, it is still not a good idea to use this variable to predict gestational age.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+  term                                      estimate std.error statistic p.value
+  &lt;chr&gt;                                        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 (Intercept)                                3.97e+1  0.115      346.     0     
+2 PROMIS_Anxiety                            -1.33e-2  0.00778     -1.71   0.0864
+3 Edinburgh_Postnatal_Depression_Scale      -1.52e-2  0.0134      -1.14   0.255 
+4 PROMIS_Anxiety:Edinburgh_Postnatal_Depre…  2.47e-4  0.000584     0.423  0.673 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic    p.value    df  logLik    AIC    BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1   0.00520       0.00472  1.60      10.8    4.37e-7     3 -11744. 23497. 23531.
+# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+</div>
+</div>
+<p>We decided to fit an interaction model to see if the <span class="math inline">\(R^2\)</span> may increase compared to individual models; however, it barely increased. This suggests that using both anxiety and depression as predictors that interact with each other could be slightly better than using single variables, but not by much.</p>
+<p>Because we could not establish a strong relationship between gestational age and mental health, we decided to look at factors that influenced mental health.</p>
+<p><u>Anxiety vs.&nbsp;Household Income</u></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/promis-vs-income-boxplot-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 2
+  reordered_income    medanxiety
+  &lt;fct&gt;                    &lt;dbl&gt;
+1 Less than $20, 000          22
+2 $20,000- $39,999            21
+3 $40,000-$69,999             20
+4 $70,000-$99,999             19
+5 $100,000 -$124,999          19
+6 $125,000- $149,999          19
+7 $150,000 - $174,999         17
+8 $175,000- $199,999          17
+9 $200,000+                   18</code></pre>
+</div>
+</div>
+<p>We used a boxplot to visualize the relationship between anxiety and household income. Based on the plot, there appears to be a visible downward trend in median anxiety scores as annual income range increases. This is supported by a tibble of the median anxiety score for each bracket, showing that the median decreases with each bracket, with the exception of the $200,000+ range.</p>
+<p>We can perform a Kruskal-Wallis statistical test to test if there if the medians of all these groups are statistically the same.</p>
+<p>Null hypothesis: The median anxiety level of each income category is the same.</p>
+<p>Alternative hypothesis: The median anxiety level of the income categories is not the same across each category (at least one group’s median may be different).</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Kruskal-Wallis rank sum test
+
+data:  PROMIS_Anxiety by Household_Income
+Kruskal-Wallis chi-squared = 234.83, df = 8, p-value &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>We received a p-value of nearly 0 (2.2e-16), so we reject the null hypothesis. There is sufficient statistical evidence that the median anxiety level of all income levels is not the same.</p>
+<p>Now, let’s try to see if there is a downward trend between the income categories and the anxiety levels. We can transform each category into a quantitative value using the midpoint of each category, then fit a regression model between anxiety level and the midpoint of each income category. We removed $200,000+ because there is no midpoint to get from that category.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/midpoint-reg-anxiety-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term              estimate  std.error statistic  p.value
+  &lt;chr&gt;                &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)     20.9       0.164          127.  0       
+2 midpointincomes -0.0000199 0.00000143     -14.0 5.72e-44</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1    0.0223        0.0222  6.00      196. 5.72e-44     1 -27499. 55004. 55025.
+# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+</div>
+</div>
+<p>Though the <span class="math inline">\(R^2\)</span> value is low again, we can see that the p-value is extremely low and slope coefficient is negative, indicating that there is likely a negative relationship between the anxiety levels and the midpoint incomes (though it may not be very strong). Although the coefficient is very low, it can be interpreted in the context of the scenario; with every $10,000 increase in income, we can estimate on average there is a .2 decrease in anxiety on the PROMIS scale. There is a visible downward trend from the line of best fit. However, we should not use this model to make predictions due to the low <span class="math inline">\(R^2\)</span>.</p>
+<p><u>Depression Level vs.&nbsp;Household Income</u></p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 980 rows containing non-finite values (`stat_boxplot()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/edinburgh-vs-income-boxplot-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 2
+  reordered_income    meddep
+  &lt;fct&gt;                &lt;dbl&gt;
+1 Less than $20, 000      13
+2 $20,000- $39,999        13
+3 $40,000-$69,999         11
+4 $70,000-$99,999         10
+5 $100,000 -$124,999      10
+6 $125,000- $149,999      10
+7 $150,000 - $174,999      9
+8 $175,000- $199,999       8
+9 $200,000+                9</code></pre>
+</div>
+</div>
+<p>We then repeated our process with depression using scores from the Edinburgh Postnatal Depression Scale against household income brackets.</p>
+<p>Based on both the boxplot and the medians tibble, there again appears to be a visible downward trend in median depression scores as the annual income range increases, with the only exception being the $200,000+ range once again. Other than this, the median scores all decreased.</p>
+<p>We can perform another Kruskal-Wallis statistical test to test if there if the median depression scores across brackets are the same.</p>
+<p>Null hypothesis: The median depression level of each income category is the same.</p>
+<p>Alternative hypothesis: The median depression level of the income categories is not the same across each category (at least one group’s median may be different).</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Kruskal-Wallis rank sum test
+
+data:  Edinburgh_Postnatal_Depression_Scale by Household_Income
+Kruskal-Wallis chi-squared = 367.77, df = 8, p-value &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>We get a p-value of nearly 0 (2.2e-16), so we reject the null hypothesis. We have sufficient statistical evidence that the median depression level of all income levels is not the same.</p>
+<p>Now, let’s try to see if there is a downward trend between the income categories and the depression levels. We can transform each category into a quantitative value using the midpoint of each category, then fit a regression model between depression level and the midpoint of each income category. We removed $200,000+ because there is no midpoint to get from that category.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/midpoint-reg-depression-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term              estimate  std.error statistic  p.value
+  &lt;chr&gt;                &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)     12.8       0.148           86.4 0       
+2 midpointincomes -0.0000234 0.00000129     -18.2 6.92e-73</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1    0.0374        0.0373  5.41      332. 6.92e-73     1 -26614. 53234. 53255.
+# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+</div>
+</div>
+<p>Though the <span class="math inline">\(R^2\)</span> is low again, the p-value is low and the slope coefficient is negative, suggesting that there is likely some negative relationship between the depression levels and the midpoint incomes (though it is likely not strong). Again, the slope can be interpreted in the context of the problem, with every 10,000 dollar increase in income, we can expect, on average, a .234 decrease in Edinburgh scale measurement for depression. We should not use this model to make predictions due to the low <span class="math inline">\(R^2\)</span>.</p>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>We attempted to answer our research question at the correlation between gestational age and two mental health factors, such as anxiety measured by the PROMIS scale and depression measured by the Edinburgh Postnatal Depression Scale. To do this, we fitted a simple linear regression to each of the mental health measures to determine if there was a linear relationship between mental health and gestational age. We found a very weak relationship, with the gestational age decreasing by approximately .02 weeks with each increase in one point on the PROMIS or EPDS scales. However, because the <span class="math inline">\(R^2\)</span> for each model was so low (around 0.004), we determined that there was insufficient evidence to argue that anxiety/depression levels can accurately explain variance in gestational age and thus accurately predict it. Even looking at the graphs visibly, there are clearly large residuals between the line of best fit and many of the points, and the spread is significant. As a result, we concluded that based on our data, there may be a weak relationship between quantified mental health measurements and the gestational age of mothers at childbirth; , our model cannot be used to predict gestational age. Our hypothesis was not completely ruled out due to there potentially being a weak negative relationship between the these two variables (gestational age vs anxiety/depression), but we cannot conclude that there is a strong relationship like we had hoped.</p>
+<p>Regarding the question about mental health vs.&nbsp;income ranges, we found that there is a noticeable negative relationship between household income and anxiety, as well as household income and depression. The boxplots showed visible decreases in anxiety and depression levels as the household income brackets increased. After displaying tibbles showing the median depression and anxiety measurements at each income level, they showed visible decreases as the income ranges increased. However, we cannot make conclusive statement that this is a strong relationship based solely on visual cues, so we conducted a Kruskal-Wallis test and concluded that there was evidence that the income brackets had statistically different medians. We then transformed the categorical income brackets into quantitative values by taking the midpoint of each category and plotted a simple linear regression for both anxiety and depression. Though the <span class="math inline">\(R^2\)</span> for each of these was low, the negative slope coefficients and near-zero p-values indicate evidence for some sort of a negative relationship between income and anxiety/depression. There is also a visibly negative line of best fit. However, the model fitted should not be used to predict values. We conclude that based on our data, there is evidence to support that the median anxiety and depression levels across income categories is different, and that there could be evidence pointing to a negative relationship (as income increases, anxiety/depression levels decrease), though the relationship is likely not very strong due to the low <span class="math inline">\(R^2\)</span>. Our initial hypothesis holds merit based on our results, but we advise further testing to make stronger claims. One potential way to make our results much more accurate and conclusive would be to have the actual household income for each person instead of just having their range.</p>
+<p>Because the data was not sampled randomly from the population, it is not generalizable, meaning we cannot apply our results to the entire population of Canada mothers giving birth during the time frame the data was collected. There was also no random assignment used due to the study being correlational and not experimental, so we cannot infer causation between variables when doing regression testing.</p>
+<p><strong>Appendix</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openintro)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsbox)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>pregnancy <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/OSFData_Upload_2023_Mar30.csv"</span>)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(pregnancy)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>pregnancy <span class="sc">|&gt;</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> Edinburgh_Postnatal_Depression_Scale, <span class="at">y =</span> Gestational_Age_At_Birth)</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> F) <span class="sc">+</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Gestational Age at Birth vs. Edinburgh Postnatal Depression Scale"</span>,</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Edinburgh Postnatal Depression Scale"</span>,</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Gestational Age at Birth"</span>)</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>gestvsdepreg <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(Gestational_Age_At_Birth <span class="sc">~</span> Edinburgh_Postnatal_Depression_Scale, <span class="at">data =</span> pregnancy) </span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(gestvsdepreg)</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(gestvsdepreg)</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>pregnancy <span class="sc">|&gt;</span></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> PROMIS_Anxiety, <span class="at">y =</span> Gestational_Age_At_Birth)</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> F) <span class="sc">+</span></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Gestational Age at Birth vs. PROMIS Anxiety Scale"</span>,</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"PROMIS Anxiety Scale"</span>,</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Gestational Age at Birth"</span>)</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>gestvsanxreg <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(Gestational_Age_At_Birth <span class="sc">~</span> PROMIS_Anxiety, <span class="at">data =</span> pregnancy) </span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(gestvsanxreg)</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(gestvsanxreg)</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>gestvsanxdepreg <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(Gestational_Age_At_Birth <span class="sc">~</span> PROMIS_Anxiety <span class="sc">*</span> Edinburgh_Postnatal_Depression_Scale, <span class="at">data =</span> pregnancy) </span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(gestvsanxdepreg)</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(gestvsanxdepreg)</span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>pregnancy <span class="sc">|&gt;</span></span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">reordered_income =</span> <span class="fu">fct_relevel</span>(<span class="fu">as.factor</span>(Household_Income), <span class="st">"Less than $20, 000"</span>, <span class="st">"$20,000- $39,999"</span>, <span class="st">"$40,000-$69,999"</span>, <span class="st">"$70,000-$99,999"</span>, <span class="st">"$100,000 -$124,999"</span>, <span class="st">"$125,000- $149,999"</span>, <span class="st">"$150,000 - $174,999"</span>, <span class="st">"$175,000- $199,999"</span>, <span class="st">"$200,000+"</span>)</span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(Household_Income) <span class="sc">|&gt;</span></span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> reordered_income, </span>
+<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> PROMIS_Anxiety, </span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>        <span class="at">fill =</span> reordered_income)</span>
+<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb19-56"><a href="#cb19-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"PROMIS Anxiety Scale vs. Household Income"</span>,</span>
+<span id="cb19-57"><a href="#cb19-57" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Household Income"</span>,</span>
+<span id="cb19-58"><a href="#cb19-58" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"PROMIS Anxiety Scale"</span>,</span>
+<span id="cb19-59"><a href="#cb19-59" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Income Category"</span>)</span>
+<span id="cb19-60"><a href="#cb19-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-61"><a href="#cb19-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-62"><a href="#cb19-62" aria-hidden="true" tabindex="-1"></a>pregnancy <span class="sc">|&gt;</span></span>
+<span id="cb19-63"><a href="#cb19-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a>    <span class="at">reordered_income =</span> <span class="fu">fct_relevel</span>(<span class="fu">as.factor</span>(Household_Income), <span class="st">"Less than $20, 000"</span>, <span class="st">"$20,000- $39,999"</span>, <span class="st">"$40,000-$69,999"</span>, <span class="st">"$70,000-$99,999"</span>, <span class="st">"$100,000 -$124,999"</span>, <span class="st">"$125,000- $149,999"</span>, <span class="st">"$150,000 - $174,999"</span>, <span class="st">"$175,000- $199,999"</span>, <span class="st">"$200,000+"</span>)</span>
+<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(Household_Income, PROMIS_Anxiety) <span class="sc">|&gt;</span></span>
+<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(reordered_income) <span class="sc">|&gt;</span></span>
+<span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">medanxiety=</span><span class="fu">median</span>((PROMIS_Anxiety)))</span>
+<span id="cb19-69"><a href="#cb19-69" aria-hidden="true" tabindex="-1"></a><span class="fu">kruskal.test</span>(PROMIS_Anxiety <span class="sc">~</span> Household_Income, <span class="at">data =</span> pregnancy)</span>
+<span id="cb19-70"><a href="#cb19-70" aria-hidden="true" tabindex="-1"></a>midpointpreg <span class="ot">&lt;-</span> pregnancy <span class="sc">|&gt;</span></span>
+<span id="cb19-71"><a href="#cb19-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(Household_Income, PROMIS_Anxiety, Edinburgh_Postnatal_Depression_Scale) <span class="sc">|&gt;</span></span>
+<span id="cb19-72"><a href="#cb19-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb19-73"><a href="#cb19-73" aria-hidden="true" tabindex="-1"></a>    <span class="at">midpointincomes =</span> <span class="fu">case_when</span>(</span>
+<span id="cb19-74"><a href="#cb19-74" aria-hidden="true" tabindex="-1"></a>    Household_Income <span class="sc">==</span> <span class="st">"Less than $20, 000"</span> <span class="sc">~</span> <span class="dv">10000</span>,</span>
+<span id="cb19-75"><a href="#cb19-75" aria-hidden="true" tabindex="-1"></a>    Household_Income <span class="sc">==</span> <span class="st">"$20,000- $39,999"</span> <span class="sc">~</span> <span class="dv">30000</span>,</span>
+<span id="cb19-76"><a href="#cb19-76" aria-hidden="true" tabindex="-1"></a>    Household_Income <span class="sc">==</span> <span class="st">"$40,000-$69,999"</span> <span class="sc">~</span> <span class="dv">55000</span>,</span>
+<span id="cb19-77"><a href="#cb19-77" aria-hidden="true" tabindex="-1"></a>    Household_Income <span class="sc">==</span> <span class="st">"$70,000-$99,999"</span> <span class="sc">~</span> <span class="dv">85000</span>,</span>
+<span id="cb19-78"><a href="#cb19-78" aria-hidden="true" tabindex="-1"></a>    Household_Income <span class="sc">==</span> <span class="st">"$100,000 -$124,999"</span> <span class="sc">~</span> <span class="dv">112500</span>,</span>
+<span id="cb19-79"><a href="#cb19-79" aria-hidden="true" tabindex="-1"></a>    Household_Income <span class="sc">==</span> <span class="st">"$125,000- $149,999"</span> <span class="sc">~</span> <span class="dv">137500</span>,</span>
+<span id="cb19-80"><a href="#cb19-80" aria-hidden="true" tabindex="-1"></a>    Household_Income <span class="sc">==</span> <span class="st">"$150,000 - $174,999"</span> <span class="sc">~</span> <span class="dv">162500</span>,</span>
+<span id="cb19-81"><a href="#cb19-81" aria-hidden="true" tabindex="-1"></a>    Household_Income <span class="sc">==</span> <span class="st">"$175,000- $199,999"</span> <span class="sc">~</span> <span class="dv">187500</span>,</span>
+<span id="cb19-82"><a href="#cb19-82" aria-hidden="true" tabindex="-1"></a>    Household_Income <span class="sc">==</span> <span class="st">"$200,000+"</span> <span class="sc">~</span> <span class="dv">200000</span></span>
+<span id="cb19-83"><a href="#cb19-83" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">|&gt;</span></span>
+<span id="cb19-84"><a href="#cb19-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(midpointincomes <span class="sc">!=</span> <span class="dv">200000</span>)</span>
+<span id="cb19-85"><a href="#cb19-85" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb19-86"><a href="#cb19-86" aria-hidden="true" tabindex="-1"></a>midpointpreg <span class="sc">|&gt;</span></span>
+<span id="cb19-87"><a href="#cb19-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb19-88"><a href="#cb19-88" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> midpointincomes, <span class="at">y =</span> PROMIS_Anxiety)</span>
+<span id="cb19-89"><a href="#cb19-89" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-90"><a href="#cb19-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb19-91"><a href="#cb19-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> F) <span class="sc">+</span></span>
+<span id="cb19-92"><a href="#cb19-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"PROMIS Anxiety Scale vs. Household Income Bracket Midpoint"</span>,</span>
+<span id="cb19-93"><a href="#cb19-93" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Household Income Bracket Midpoint (In dollars)"</span>,</span>
+<span id="cb19-94"><a href="#cb19-94" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"PROMIX Anxiety Scale Scores"</span>)</span>
+<span id="cb19-95"><a href="#cb19-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-96"><a href="#cb19-96" aria-hidden="true" tabindex="-1"></a>anxvsmidincome <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb19-97"><a href="#cb19-97" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb19-98"><a href="#cb19-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(PROMIS_Anxiety <span class="sc">~</span> midpointincomes, <span class="at">data =</span> midpointpreg)</span>
+<span id="cb19-99"><a href="#cb19-99" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(anxvsmidincome)</span>
+<span id="cb19-100"><a href="#cb19-100" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(anxvsmidincome)</span>
+<span id="cb19-101"><a href="#cb19-101" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb19-102"><a href="#cb19-102" aria-hidden="true" tabindex="-1"></a>pregnancy <span class="sc">|&gt;</span></span>
+<span id="cb19-103"><a href="#cb19-103" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb19-104"><a href="#cb19-104" aria-hidden="true" tabindex="-1"></a>    <span class="at">reordered_income =</span> <span class="fu">fct_relevel</span>(<span class="fu">as.factor</span>(Household_Income), <span class="st">"Less than $20, 000"</span>, <span class="st">"$20,000- $39,999"</span>, <span class="st">"$40,000-$69,999"</span>, <span class="st">"$70,000-$99,999"</span>, <span class="st">"$100,000 -$124,999"</span>, <span class="st">"$125,000- $149,999"</span>, <span class="st">"$150,000 - $174,999"</span>, <span class="st">"$175,000- $199,999"</span>, <span class="st">"$200,000+"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb19-105"><a href="#cb19-105" aria-hidden="true" tabindex="-1"></a>      <span class="fu">drop_na</span>(Household_Income) <span class="sc">|&gt;</span></span>
+<span id="cb19-106"><a href="#cb19-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb19-107"><a href="#cb19-107" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> reordered_income, </span>
+<span id="cb19-108"><a href="#cb19-108" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> Edinburgh_Postnatal_Depression_Scale, </span>
+<span id="cb19-109"><a href="#cb19-109" aria-hidden="true" tabindex="-1"></a>        <span class="at">fill =</span> reordered_income)</span>
+<span id="cb19-110"><a href="#cb19-110" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-111"><a href="#cb19-111" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb19-112"><a href="#cb19-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb19-113"><a href="#cb19-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Edinburgh Depression Scale vs. Household Income"</span>,</span>
+<span id="cb19-114"><a href="#cb19-114" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Household Income"</span>,</span>
+<span id="cb19-115"><a href="#cb19-115" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Edinburgh Depression Scale"</span>,</span>
+<span id="cb19-116"><a href="#cb19-116" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Income Category"</span>)</span>
+<span id="cb19-117"><a href="#cb19-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-118"><a href="#cb19-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-119"><a href="#cb19-119" aria-hidden="true" tabindex="-1"></a>pregnancy <span class="sc">|&gt;</span></span>
+<span id="cb19-120"><a href="#cb19-120" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb19-121"><a href="#cb19-121" aria-hidden="true" tabindex="-1"></a>    <span class="at">reordered_income =</span> <span class="fu">fct_relevel</span>(<span class="fu">as.factor</span>(Household_Income), <span class="st">"Less than $20, 000"</span>, <span class="st">"$20,000- $39,999"</span>, <span class="st">"$40,000-$69,999"</span>, <span class="st">"$70,000-$99,999"</span>, <span class="st">"$100,000 -$124,999"</span>, <span class="st">"$125,000- $149,999"</span>, <span class="st">"$150,000 - $174,999"</span>, <span class="st">"$175,000- $199,999"</span>, <span class="st">"$200,000+"</span>)</span>
+<span id="cb19-122"><a href="#cb19-122" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb19-123"><a href="#cb19-123" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(Household_Income, Edinburgh_Postnatal_Depression_Scale) <span class="sc">|&gt;</span></span>
+<span id="cb19-124"><a href="#cb19-124" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(reordered_income) <span class="sc">|&gt;</span></span>
+<span id="cb19-125"><a href="#cb19-125" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">meddep=</span><span class="fu">median</span>((Edinburgh_Postnatal_Depression_Scale)))</span>
+<span id="cb19-126"><a href="#cb19-126" aria-hidden="true" tabindex="-1"></a><span class="fu">kruskal.test</span>(Edinburgh_Postnatal_Depression_Scale <span class="sc">~</span> Household_Income, <span class="at">data =</span> pregnancy)</span>
+<span id="cb19-127"><a href="#cb19-127" aria-hidden="true" tabindex="-1"></a>midpointpreg <span class="sc">|&gt;</span></span>
+<span id="cb19-128"><a href="#cb19-128" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb19-129"><a href="#cb19-129" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> midpointincomes, <span class="at">y =</span> Edinburgh_Postnatal_Depression_Scale)</span>
+<span id="cb19-130"><a href="#cb19-130" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-131"><a href="#cb19-131" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb19-132"><a href="#cb19-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> F) <span class="sc">+</span></span>
+<span id="cb19-133"><a href="#cb19-133" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Edinburgh Depression Scale vs. Household Income Bracket Midpoint"</span>,</span>
+<span id="cb19-134"><a href="#cb19-134" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Household Income Bracket Midpoint (In dollars)"</span>,</span>
+<span id="cb19-135"><a href="#cb19-135" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Edinburgh Depression Scale Scores"</span>)</span>
+<span id="cb19-136"><a href="#cb19-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-137"><a href="#cb19-137" aria-hidden="true" tabindex="-1"></a>depvsmidincome <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb19-138"><a href="#cb19-138" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb19-139"><a href="#cb19-139" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(Edinburgh_Postnatal_Depression_Scale <span class="sc">~</span> midpointincomes, <span class="at">data =</span> midpointpreg) </span>
+<span id="cb19-140"><a href="#cb19-140" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(depvsmidincome)</span>
+<span id="cb19-141"><a href="#cb19-141" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(depvsmidincome)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-ahmad2021" class="csl-entry" role="listitem">
+Ahmad, Monica, and Laura Vismara. 2021. <span>“The Psychological Impact of COVID-19 Pandemic on Women<span>’</span>s Mental Health During Pregnancy: A Rapid Evidence Review.”</span> <em>International Journal of Environmental Research and Public Health</em> 18 (13): 7112. <a href="https://doi.org/10.3390/ijerph18137112">https://doi.org/10.3390/ijerph18137112</a>.
+</div>
+<div id="ref-kolker2021" class="csl-entry" role="listitem">
+Kolker, Sabrina, Anne Biringer, Jessica Bytautas, Haley Blumenfeld, Sahana Kukan, and June C. Carroll. 2021. <span>“Pregnant During the COVID-19 Pandemic: An Exploration of Patients<span>’</span> Lived Experiences.”</span> <em>BMC Pregnancy and Childbirth</em> 21 (1). <a href="https://doi.org/10.1186/s12884-021-04337-9">https://doi.org/10.1186/s12884-021-04337-9</a>.
+</div>
+<div id="ref-lebel2023" class="csl-entry" role="listitem">
+Lebel, Catherine, Lianne Tomfohr-Madsen, Gerald Giesbrecht, Beatrice Pui Yee Lai, Mercedes Bagshawe, Makayla Freeman, Mary Kate Hapin, et al. 2023. <span>“Prenatal Mental Health Data and Birth Outcomes in the Pregnancy During the COVID-19 Pandemic Dataset.”</span> <em>Data in Brief</em> 49 (August): 109366. <a href="https://doi.org/10.1016/j.dib.2023.109366">https://doi.org/10.1016/j.dib.2023.109366</a>.
+</div>
+<div id="ref-Office_2023" class="csl-entry" role="listitem">
+Office, U. S. Government Accountability. 2023. <span>“Maternal Health: Outcomes Worsened and Disparities Persisted During the Pandemic.”</span> <em>Maternal Health: Outcomes Worsened and Disparities Persisted During the Pandemic | U.S. GAO</em>. <a href="https://www.gao.gov/products/gao-23-105871#:~:text=Pregnant%20women%20with%20COVID%2D19">https://www.gao.gov/products/gao-23-105871#:~:text=Pregnant%20women%20with%20COVID%2D19</a>.
+</div>
+<div id="ref-wei2021" class="csl-entry" role="listitem">
+Wei, Shu Qin, Marianne Bilodeau-Bertrand, Shiliang Liu, and Nathalie Auger. 2021. <span>“The Impact of COVID-19 on Pregnancy Outcomes: A Systematic Review and Meta-Analysis.”</span> <em>Canadian Medical Association Journal</em> 193 (16): E540–48. <a href="https://doi.org/10.1503/cmaj.202604">https://doi.org/10.1503/cmaj.202604</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

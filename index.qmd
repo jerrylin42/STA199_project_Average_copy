@@ -1,0 +1,8 @@
+---
+title: "Average"
+subtitle: "STA 199 Project"
+format: html
+editor: visual
+---
+
+The COVID-19 pandemic impacted billions of people worldwide, with high-risk groups such as those with underlying medical conditions, those over the age of 65, and pregnant women facing some of the most severe consequences. This report looks specifically at the impact of COVID-19 on pregnant women, exploring the relationship between mental health during the pandemic and other factors such as demographic information and babies' birth information. We used a data set collected by Giesbrecht et al., who conducted a study exploring mental health and pregnancy effects during COVID-19, to answer the research question: Do pregnant women with higher anxiety and depression levels (measured via the PROMIS and Edinburgh Scale) tend to have babies with a shorter gestational age? Our initial analysis revealed a slight negative correlation, with mothers suffering from higher anxiety and depression levels tending to have slightly lower recorded gestational ages. However, the relationship was extremely weak, so we turned to look at other factors related to mental health, and found a possible negative relationship between anxiety/depression and household income, with anxiety and depression decreasing as household income increases. All in all, our results could have implications on the factors that might affect pregnant women even coming out of the pandemic, and might prompt further research into mitigating these effects.

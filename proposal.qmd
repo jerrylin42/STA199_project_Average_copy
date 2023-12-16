@@ -1,0 +1,176 @@
+---
+title: "An Analysis of Maternal Pregnancy and Mental Health under COVID-19"
+subtitle: "Proposal"
+format: html
+editor: visual
+bibliography: references.bib
+---
+
+```{r}
+#| label: load-pkgs
+#| message: false
+
+library(tidyverse)
+```
+
+# Data 1
+
+## Introduction and data
+
+Data: https://researchportal.port.ac.uk/en/datasets/video-games-dataset
+
+The data was collected by Joe Cox from an online database from VGChartz.
+
+The data was originally collected from an online database maintained by VGChartz.com. It represents a "snapshot of the US video game market during September 2011," with games released in the US up till September 2010.
+
+Each observation represents a unique video game; these games were released from 2004 to 2010 and have data such as sales, genre, reviews scores, length, etc.
+
+## Research question
+
+To what extent is the review score of a game associated with factors outside game quality, such as the game publisher, the console, the genre, and the sales of a game? 
+
+We intend to research how the public reception to a video game may be influenced or correlated with factors that are unrelated to the overall quality of a video game, which is the metric used to give a numerical rating (review score) to a game. While it is a true that game quality is tied most clearly to things such as gameplay, graphics, mechanics, bugs/technical issues, and stories, we predict that a video game's quality can be correlated with things outside these factors such as sales. 
+
+Review score and sales are the only quantitative variables. Publisher, console, genre are all categorical variables. 
+
+## Literature
+
+[@cox2013]
+
+<https://onlinelibrary.wiley.com/doi/10.1002/mde.2608> 
+
+The article discusses the statistics of the blockbuster video game and analyzes the variables that can contribute to the immense sale success of certain video games using both least squared regression as well as logistic regression. After performing a regression analysis, it was concluded that variables such as review score, whether it was a sequel to a franchise, age rating, and cross-platform playability were most statistically significant variables to help explain sales. It was also found that major publishers were associated with higher sales. Utilizing a logistic analysis yielded similar results. The paper went on to conclude that publisher and reviews played significant roles in influencing consumers' decisions to purchase a certain game or not. 
+
+The article cited mostly looks at factors that impact the sales of blockbuster video games. Our research question focuses more on the review score, and the specific extent to which factors outside game quality impact the score.
+
+## Glimpse of data
+
+```{r}
+#| label: load-data-1
+
+videogamedata <- read_csv("data/Managerial_and_Decision_Economics_2013_Video_Games_Dataset.csv")
+
+glimpse(videogamedata)
+```
+
+# Data 2
+
+## Introduction and data
+
+Data: <https://think.cs.vt.edu/corgis/csv/billionaires/>
+
+This data comes from Forbes World Billionaires list.  
+
+The data has been compiled from the list between the years 1996 to 2015. Caroline Freund and Sarah Oliver from Peterson Institute for International Economics are the individuals who produced and organized this data set, which was established in February, 2016. 
+
+The information collected brings light to the individuals who hold extreme wealth in the United States and Europe. They are classified as self-made or inherited wealth, while also noting their demographic. Key features of this data set include, the name of the company associated with the billionaire, sector of business, age, gender, citizenship, net worth, etc. This data set helps us understand the motivations and factors that allow these individuals to be so successful. Also, highlighting the distinct difference between American and European billionaires.  
+
+## Research question
+
+What role does socio-economic background and access to resources play in the formation of the super-rich elite, and to what extent do factors like family wealth/inheritance, social network (relationship to company), and demographics influence an individual's journey to becoming a billionaire? 
+
+Our research topic is intended to investigate whether or not individuals who are born into wealth and born into an environment of opportunity, are more likely to be successful. The idea that these individuals don't have to work as hard for wealth because they are handed the possibility from the beginning. Is this always the case? Do individuals who are granted access to resources use them to their advantage? We can also look at the flip side and see individuals who do not obtain an inheritance, investigating their journey to success. Even though they are at a disadvantage, different motivations and characteristics could have driven them to wealth. The data set will help us get a visual representation of our question and aid in our hypothesis. Aside from the data presented in the data set, we can also look at education.
+
+Hypothesis: Individuals who have access to resources are more likely to be successful, but that does not mean individuals who inherit wealth are more likely to be successful. It is what one does with their opportunity and resources that allows them to be a present force in society.
+
+Rank → Quantitative 
+
+Company Name → Categorical 
+
+Company Relationship → Categorical 
+
+Company Sector → Categorical 
+
+Demographic Age → Quantitative 
+
+Demographic Gender → Categorical 
+
+Wealth Type → Categorical 
+
+Wealth Worth → Quantitative 
+
+Inherited → Categorical
+
+## Literature
+
+<https://www.piie.com/sites/default/files/documents/wp16-1.pdf>
+
+The article analyzes trends of billionaires and extreme wealth in the United States, Europe, and other advanced countries. It comes to three main conclusions. First, extreme wealth is growing at a significantly faster rate in developing, emerging markets compared to already advanced countries. Second, wealth is increasingly self-made -- in the United States, in fact, wealth is created and destroyed at a nearly equal rate, although this is less dynamic in countries such as Europe where fortune is more likely to be inherited and thus older. Finally, there are significant differences in extreme wealth between different advanced countries. For example, the United States has more self-made wealth, while Europe has more inherited wealth; East Asia contains more of the large-scale entrepreneur. This offers information about the environment required for big business to succeed in various countries.
+
+The article cited focuses on broad differences between locations and countries, such as self-made vs. inherited in the United States vs. Europe. In our research question, we aim to look at specific factors in one location to determine to what extent they play an impact on the formation of extreme wealth.
+
+## Glimpse of data
+
+```{r}
+#| label: data_set_2
+
+Billionaires <- read_csv("data/billionaires.csv")
+
+glimpse(Billionaires)
+```
+
+# Data 3
+
+## Introduction and data
+
+DataSet: https://osf.io/ha5dp/
+
+The pregnancy protocols during COVID-19 dataset was sourced from a group of researchers conducting a study on mental health of pregnant individuals during the pandemic. Data was collected through the Research Electronic Data Capture (REDCap) website, which was promoted through online advertisements in Facebook and Instagram. Moreover, throughout this study, the respondents, who were aged 17 to 35 years old, were followed-up multiple times during their pregnancy until one year post-birth.
+
+The observations focused on the mothers' mental health and the babies' birth information such as weight, height, delivery mode, and date. The mental health information was collected through the Edinburgh Postnatal Depression Scale, a screening tool to assist medical practitioners in identifying if the patient suffers from postnatal depression, and the PROMIS anxiety scale, a patient-reported measurement system that assesses the fear and anxiety of an individual, which is often conducted before clinician visits.
+
+## Research question
+
+-   Is the household income of pregnant individuals correlated with their mental health during the pandemic?
+
+-   Do pregnant individuals with higher anxiety and depression levels (measured in the PROMIS and Edinburgh scale) tend to give birth to premature offspring? To what extent are each of these factors correlated with the status of the offspring?
+
+The first research question investigates the classes of pregnant individuals correlates to their mental health state, which is measured in the PROMIS anxiety scale and the Edinburgh scale. Through it, we aim to explore our hypothesis: financially stable mothers experience less pregnancy-related mental struggles as compared to mothers in other socioeconomic status during the pandemic.
+
+The second research question explores how mental health factors such as anxiety and depression levels are correlated with the status of offspring. It looks not only at how these factors are linked to premature offspring, but to what extent each one has an impact. We hypothesize that there is a correlation between higher anxiety and depression levels and rate of premature offspring; however, it is uncertain which factor plays a bigger role.
+
+Question 1: 
+
+Explanatory variable: household income (quantitative)
+
+Mental health during pandemic (categorical)
+
+Question 2:
+
+Anxiety and depression levels (categorical)
+
+Gestational Age at Birth (categorical)
+
+Weight and height at birth (quantitative)
+
+## Literature
+
+[@kolker2021]
+
+Related Literature: <https://bmcpregnancychildbirth.biomedcentral.com/articles/10.1186/s12884-021-04337-9>
+
+The article describes a study conducted on 12 participants, ranging from 30-43 years old, between 1-6 months after giving birth. The study found that six main themes emerged from their responses to interviews:
+
+1.  Challenges related to child-bearing in their daily lives: this included employment, access to food, and transportation
+
+2.  Increased worry, fear, and uncertainty: patients expressed worry about their partner contracting the virus, uncertainty about the effects it might have on their baby due to lack of information, etc.
+
+3.  Pervasive sense of loss: mothers expressed a disconnect between their expectations of pregnancy and the reality, in terms of bonding with their baby, familial support, etc.
+
+4.  Challenge accessing healthcare: in terms of mental health care, physiotherapy, breastfeeding support
+
+5.  Coping strategies with stress of pandemic: patients described seeking out information or adaptive behaviors such as self-care and seeking support
+
+6.  Offered advice for others: advocating for themselves, avoiding isolation
+
+The article cited describes the mental health implications of the COVID-19 pandemic on pregnancy in fairly broad terms, with general themes of worry, challenges, loss, etc. Our research question is more specific and looks at quantifiable factors, such as household income and anxiety levels in relation to outcomes such as mental health or attributes of the baby.
+
+## Glimpse of data
+
+```{r}
+#| label: load-data-3
+
+pregnancy <- read_csv("data/OSFData_Upload_2023_Mar30.csv")
+
+glimpse(pregnancy)
+```
